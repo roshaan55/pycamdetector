@@ -1,10 +1,10 @@
 import cv2
-import pycamdetector as pcam
+import pycamdetector
 import time
 
 cap = cv2.VideoCapture(0)
 pTime = 0
-detector = pcam.FaceDetector(minDetectionCon=0.7)
+detector = pycamdetector.FaceDetector(minDetectionCon=0.7)
 while True:
     success, img = cap.read()
     img, bboxs = detector.findFaces(img)
