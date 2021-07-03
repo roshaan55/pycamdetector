@@ -10,11 +10,11 @@ pip install pycamdetector
 ```py
 import cv2
 import time
-import pycamdetector as pcam
+import pycamdetector
 
 pTime = 0
 cap = cv2.VideoCapture(0)
-detector = pcam.handDetector(detectionCon=0.85, maxHands=1)
+detector = pycamdetector.handDetector(detectionCon=0.85, maxHands=1)
 while True:
     success, img = cap.read()
     img = cv2.flip(img, 1)
