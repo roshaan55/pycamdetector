@@ -1,5 +1,5 @@
 # pycamdetector
-Python package to detect face landmarks(468), detect face, and least but not last track the hands and also detect its landmarks(21) by using Webcam.
+Python package to detect face landmarks(468), detect face, pose estimations and least but not last track the hands and also detect its landmarks(21) by using Webcam.
 
 ## Installation:
 ```nano
