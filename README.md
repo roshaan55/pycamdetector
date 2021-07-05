@@ -34,3 +34,4 @@ while True:
     cv2.imshow("Image", img)
     cv2.waitKey(1)
 ```
+For more examples see [Duck Duck Go](https://github.com/roshaan55/pycamdetector/blob/main/examples "Examples of funcions of pydetector").
