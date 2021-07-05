@@ -1,9 +1,9 @@
 import cv2
 import time
-import PoseModule as pm
+import pycametector
 
 cap = cv2.VideoCapture(0)
-detector = pm.poseDetector()
+detector = pycametector.poseDetector()
 pTime = 0
 while True:
     success, img = cap.read()
