@@ -1,6 +1,8 @@
 # pycamdetector
 Python package to detect face landmarks(468), detect face, pose estimations and least but not last track the hands and also detect its landmarks(21) by using Webcam.
 
+New Method Object Detector is added in new update **pycamdetector 0.4**
+
 ## Installation:
 ```nano
 pip install pycamdetector
@@ -34,4 +36,32 @@ while True:
     cv2.imshow("Image", img)
     cv2.waitKey(1)
 ```
+
+## Object Detection Usage:
+```py
+import cv2
+import time
+import pycamdetector
+
+cap = cv2.VideoCapture(0)
+cap.set(3, 640)
+cap.set(4, 480)
+
+
+# include these necessary files from sources folder
+
+configpath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
+weightpath = 'frozen_inference_graph.pb'
+labelsPath = 'coco.names'
+
+detector = pycamdetector.ObjectDetector(weightpath, configpath, labelsPath)
+
+while True:
+    success, img = cap.read()
+    img, indices = detector.DetectObject(img)
+    print(indices)
+    cv2.imshow("Output", img)
+    cv2.waitKey(1)
+```
+
 For more examples see [Examples](https://github.com/roshaan55/pycamdetector/blob/main/examples "Examples of funcions of pydetector").
