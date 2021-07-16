@@ -48,7 +48,7 @@ cap.set(3, 640)
 cap.set(4, 480)
 
 
-# include these necessary files from sources folder
+# Download these necessary files from this repository
 
 configpath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
 weightpath = 'frozen_inference_graph.pb'
