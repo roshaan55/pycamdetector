@@ -2,6 +2,7 @@
 Python package to detect face landmarks(468), detect face, pose estimations and least but not last track the hands and also detect its landmarks(21) by using Webcam.
 
 New Method Object Detector is added in new update **pycamdetector 0.4**
+
 Major bugs and fixes are resolved in new update **pycamdetector 0.4.3**
 
 ## Installation:
