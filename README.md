@@ -9,8 +9,7 @@ Major bugs and fixes are resolved in new update **pycamdetector 0.4.3**
 ```nano
 pip install pycamdetector
 ```
-
-## For Upgradation(pycamdetector):
+# For Upgradation(pycamdetector):
 ```nano
 pip install --upgrade pycamdetector
 ```
