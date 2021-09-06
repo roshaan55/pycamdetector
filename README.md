@@ -1,9 +1,7 @@
 # pycamdetector
-Python package to detect face landmarks(468), detect face, pose estimations and least but not last track the hands and also detect its landmarks(21) by using Webcam.
+Python package to detect face landmarks(468), detect face, pose estimations, object detection, Multi-Hand Gesture Control and least but not last track the hands and also detect its landmarks(21) by using Webcam.
 
-New Method Object Detector is added in new update **pycamdetector 0.4**
-
-Major bugs and fixes are resolved in new update **pycamdetector 0.4.3**
+Major bugs and fixes are resolved and Multi-Hand Gesture Control included in the new update **pycamdetector 0.4.4**
 
 ## Installation:
 ```nano
@@ -67,6 +65,50 @@ while True:
     img, indices = detector.DetectObject(img)
     print(indices)
     cv2.imshow("Output", img)
+    cv2.waitKey(1)
+```
+
+## Multi-Hand Gesture Usage:
+```py
+import cv2
+import pycamdetector as pcam
+
+cap = cv2.VideoCapture(0)
+cap.set(3, 1280)
+cap.set(4, 720)
+detector = pcam.HandDetector(detectionCon=0.85, maxHands=2)
+while True:
+    # Get image frame
+    success, img = cap.read()
+    # Find the hand and its landmarks
+    hands, img = detector.findMultipleHands(img, drawBbox=True, flipType=False)  # with draw
+
+    if hands:
+        # Hand 1
+        hand1 = hands[0]
+        lmList1 = hand1["lmList"]  # List of 21 Landmark points
+        bbox1 = hand1["bbox"]  # Bounding box info x,y,w,h
+        centerPoint1 = hand1['center']  # center of the hand cx,cy
+        handType1 = hand1["type"]  # Handtype Left or Right
+
+        fingers1 = detector.MultiHandFingersUp(hand1)
+
+        if len(hands) == 2:
+            # Hand 2
+            hand2 = hands[1]
+            lmList2 = hand2["lmList"]  # List of 21 Landmark points
+            bbox2 = hand2["bbox"]  # Bounding box info x,y,w,h
+            centerPoint2 = hand2['center']  # center of the hand cx,cy
+            handType2 = hand2["type"]  # Hand Type "Left" or "Right"
+
+            fingers2 = detector.MultiHandFingersUp(hand2)
+
+            # Find Distance between two Landmarks. Could be same hand or different hands
+            # length, info, img = detector.findMultiHandDistance(lmList1[8], lmList2[8], img)  # with draw
+            length, info, img = detector.findMultiHandDistance(centerPoint1,
+                                                               centerPoint2, img)  # with no draw
+    # Display
+    cv2.imshow("Image", img)
     cv2.waitKey(1)
 ```
 
