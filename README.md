@@ -18,7 +18,7 @@ import cv2
 import pycamdetector as pcam
 
 cap = cv2.VideoCapture(0)
-detector = HandDetector(detectionCon=0.8, maxHands=2)
+detector = pcam.HandDetector(detectionCon=0.8, maxHands=2)
 while True:
     # Get image frame
     success, img = cap.read()
