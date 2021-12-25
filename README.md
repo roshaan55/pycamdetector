@@ -81,7 +81,7 @@ The **findHands()** takes four optional parameters from user: **draw**, **flipTy
 ### 1. draw:
 Its a boolean value which takes the input as **true** or **false**, is used to draw the hand connections of hands detected in a BGR Image or by webcam input.
 By default it is true and draws the hand connections.
-If you don't want to draw the hand connectins on hand, you can pass draw as **False**
+If you don't want to draw the hand connectins on hand, you can pass draw as **False**.
 With **draw=True**
 ```py
 hands, img = detector.findHands(img)
@@ -92,7 +92,7 @@ hands = detector.findHands(img, draw=False)
 ```
 ### 2. flipType:
 Its a boolean value which takes the input as **true** or **false**, is used to draw flip the type of hands detected in a BGR Image or by webcam input.
-By default it is true and flips the hand type. If you don't want to flip the type of hand, you can pass flipType as **False**
+By default it is true and flips the hand type. If you don't want to flip the type of hand, you can pass flipType as **False**.
 With **draw=True** and **flipType=False**
 ```py
 hands, img = detector.findHands(img, fliptype=False)
@@ -103,7 +103,7 @@ hands = detector.findHands(img, fliptype=False)
 ```
 ### 3. bBox:
 Its a boolean value which takes the input as **true** or **false**, is used to draw the bounding box around the hand detected in a BGR Image or by webcam input.
-By default it is **false**. If you want to draw the bounding box around the hand detected, you can pass flipType as **True**
+By default it is **false**. If you want to draw the bounding box around the hand detected, you can pass bBox as **True**.
 With **draw=True** and **bBox=True**
 ```py
 hands, img = detector.findHands(img, bBox=True)
@@ -114,7 +114,7 @@ hands = detector.findHands(img, bBox=True)
 ```
 ### 4. showHandType:
 Its a boolean value which takes the input as **true** or **false**, is used to show the type of hand detected in a BGR Image or by webcam input.
-By default it is **false**. If you want to show the hand type of hand detected, you can pass showHandType as **True**
+By default it is **false**. If you want to show the hand type of hand detected, you can pass showHandType as **True**.
 With **draw=True** and **showHandType=True**
 ```py
 hands, img = detector.findHands(img, showHandype=True)
