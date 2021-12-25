@@ -35,7 +35,7 @@ while True:
 * imageRotate
 * putRectText
 
-## Usage:
+## Hand Detection Usage:
 ```py
 import cv2
 import pycamdetector as pcam
@@ -76,6 +76,55 @@ while True:
     cv2.imshow("Image", img)
     cv2.waitKey(1)
 ```
+The **Hand Detection Module** contains three methods: **findHands()**, **fingersUp()** and **findDistance()**
+The **findHands()** takes four optional parameters from user: **draw**, **flipType**, **bBox** and **showHandType**
+### 1. draw:
+Its a boolean value which takes the input as **true** or **false**, is used to draw the hand connections of hands detected in a BGR Image or by webcam input.
+By default it is true and draws the hand connections.
+If you don't want to draw the hand connectins on hand, you can pass draw as **False**
+With **draw=True**
+```py
+hands, img = detector.findHands(img)
+```
+With **draw=False**
+```py
+hands = detector.findHands(img, draw=False)
+```
+### 2. flipType:
+Its a boolean value which takes the input as **true** or **false**, is used to draw flip the type of hands detected in a BGR Image or by webcam input.
+By default it is true and flips the hand type. If you don't want to flip the type of hand, you can pass flipType as **False**
+With **draw=True** and **flipType=False**
+```py
+hands, img = detector.findHands(img, fliptype=False)
+```
+With **draw=False** and **flipType=False**
+```py
+hands = detector.findHands(img, fliptype=False)
+```
+### 3. bBox:
+Its a boolean value which takes the input as **true** or **false**, is used to draw the bounding box around the hand detected in a BGR Image or by webcam input.
+By default it is **false**. If you want to draw the bounding box around the hand detected, you can pass flipType as **True**
+With **draw=True** and **bBox=True**
+```py
+hands, img = detector.findHands(img, bBox=True)
+```
+With **draw=False** and **bBox=True**
+```py
+hands = detector.findHands(img, bBox=True)
+```
+### 4. showHandType:
+Its a boolean value which takes the input as **true** or **false**, is used to show the type of hand detected in a BGR Image or by webcam input.
+By default it is **false**. If you want to show the hand type of hand detected, you can pass showHandType as **True**
+With **draw=True** and **showHandType=True**
+```py
+hands, img = detector.findHands(img, showHandype=True)
+```
+With **draw=False** and **showHandType=True**
+```py
+hands = detector.findHands(img, showHandype=True)
+```
+The **fingersUp()** takes one parameter from user: **myHand**
+The **findDistance()** takes two parameters from user: **p1** and **p2**
 
 ## Face Detection Usage:
 ```py
@@ -93,9 +142,9 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 ```
-The above funtion **findFaces()** takes three optional parameters from user: **drawRect**, **showPercentage**, and **textColor**
+In the **Face Detecion Module** the funtion of **findFaces()** takes three optional parameters from user: **drawRect**, **showPercentage**, and **textColor**
 ### 1. drawRect:
-Its a boolean value which takes the input as **true** or **false**, is used to draw the rectangle around the faces detected by a BGR Image or webcam input.
+Its a boolean value which takes the input as **true** or **false**, is used to draw the rectangle around the faces detected in a BGR Image or by webcam input.
 By default it is true and draws the rectangle around the faces. If you don't want to draw rectangle around the faces detected, follow the below code:
 ```py
 import cv2
@@ -113,7 +162,7 @@ while True:
         break
 ```
 ### 2. showPercentage:
-Its a boolean value which takes the input as **true** or **false**, is used to display the accuracy percentage of the faces detected by a BGR Image or webcam input.
+Its a boolean value which takes the input as **true** or **false**, is used to display the accuracy percentage of the faces detected in a BGR Image or by webcam input.
 By default it is true and displays the accuracy percentage of the faces detected. If you don't want to display percentage, follow the below code:
 ```py
 import cv2
