@@ -26,6 +26,21 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 ```
+If you have external webcam connected, then you have to pass **1** in **VideoCapture()** function.
+### Code for External Webcam:
+```py
+import cv2
+
+cap = cv2.VideoCapture(1)
+while True:
+    # Get image frame
+    success, img = cap.read()
+    # Display or open webcam
+    cv2.imshow("Image", img)
+    # press q to close or terminate the while loop
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+```
 
 ## Additional Functions:
 * ImagesStack
