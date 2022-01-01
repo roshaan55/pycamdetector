@@ -8,6 +8,7 @@ In **pycamdetector 0.6** major bugs and fixes are resolved. The **pycamdetector 
 * Classification Module
 * Color Module
 * Serial Module
+
 In **pycamdetector 0.6** some new features are added in Face Detection Module which are: **rectColor**, **rectThick**, **corLen**, **corColor** and **corThick**.
 
 ## Installation:
