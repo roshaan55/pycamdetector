@@ -280,7 +280,7 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 ```
-### 6. corColor:
+### 7. corColor:
 It is the color of corner lines of rectangle around the faces detected.
 By default the color of corners are Pink(255, 0, 255). These are the BGR values and always accepts BGR(Blue, Green, Red) values. If you want to change the color simply follow the below code:
 ```py
@@ -298,7 +298,7 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 ```
-### 6. corThick:
+### 8. corThick:
 It is the Thickness of the corners of rectangle around the faces detected.
 By default the thickness of corners are 2. If you want to change the color simply follow the below code:
 ```py
