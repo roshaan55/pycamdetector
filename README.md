@@ -51,6 +51,7 @@ while True:
 ```
 
 ## Additional Functions:
+* imgFlip
 * ImagesStack
 * cornerRect
 * findContours
@@ -320,27 +321,27 @@ while True:
 ## FPS Usage
 ```py
 import cv2
-import time
-import pycamdetector
+from FPS import FPS
+# import time # import time module when you don't want webcam
 
+# """
+# Without Webcam
+# """
+# fpsReader = FPS()
+# while True:
+#     time.sleep(0.025)  # add delay to get 40 Frames per second
+#     fps = fpsReader.showFPS()
+#     print(fps)
+
+"""
+With Webcam
+"""
+FPSReader = FPS()
 cap = cv2.VideoCapture(0)
-cap.set(3, 640)
-cap.set(4, 480)
-
-
-# Download these necessary files from this repository
-
-configpath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
-weightpath = 'frozen_inference_graph.pb'
-labelsPath = 'coco.names'
-
-detector = pycamdetector.ObjectDetector(weightpath, configpath, labelsPath)
-
 while True:
     success, img = cap.read()
-    img, indices = detector.DetectObject(img)
-    print(indices)
-    cv2.imshow("Output", img)
+    fps, img = FPSReader.showFPS(img)
+    cv2.imshow("Image", img)
     cv2.waitKey(1)
 ```
 
