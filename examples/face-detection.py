@@ -4,11 +4,11 @@ import time
 
 cap = cv2.VideoCapture(0)
 pTime = 0
-detector = FaceDetector(minDetectionCon=0.85)
+detector = FaceDetector(minDetConf=0.85)
 while True:
     success, img = cap.read()
     img = cv2.cv2.flip(img, 1)
-    img, bboxs = detector.findFaces(img, showPercentage=False)
+    img, bboxs = detector.findFaces(img, showPerc=False)
     print(bboxs)
     cTime = time.time()
     fps = 1 / (cTime - pTime)
