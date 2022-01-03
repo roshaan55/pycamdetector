@@ -112,7 +112,7 @@ hands, img = detector.findHands(img)
 ```
 With **drawConns=False**
 ```py
-hands = detector.findHands(img, draw=False)
+hands = detector.findHands(img, drawConns=False)
 ```
 ### 2. flipType:
 Its a boolean value which takes the input as **true** or **false**, is used to draw flip the type of hands detected in a BGR Image or by webcam input.
@@ -124,7 +124,7 @@ hands, img = detector.findHands(img, fliptype=False)
 ```
 With **drawConns=False** and **flipType=False**
 ```py
-hands = detector.findHands(img, fliptype=False)
+hands = detector.findHands(img, drawConns=False, fliptype=False)
 ```
 ### 3. bBox:
 Its a boolean value which takes the input as **true** or **false**, is used to draw the bounding box around the hand detected in a BGR Image or by webcam input.
@@ -136,7 +136,7 @@ hands, img = detector.findHands(img, bBox=True)
 ```
 With **drawConns=False** and **bBox=True**
 ```py
-hands = detector.findHands(img, bBox=True)
+hands = detector.findHands(img, drawConns=False, bBox=True)
 ```
 ### 4. showHandType:
 Its a boolean value which takes the input as **true** or **false**, is used to show the type of hand detected in a BGR Image or by webcam input.
@@ -148,7 +148,7 @@ hands, img = detector.findHands(img, showHandype=True)
 ```
 With **drawConns=False** and **showHandType=True**
 ```py
-hands = detector.findHands(img, showHandype=True)
+hands = detector.findHands(img, drawConns=False, showHandype=True)
 ```
 The **fingersUp()** takes one parameter from user: **myHand**
 The **findDistance()** takes two parameters from user: **p1** and **p2**
