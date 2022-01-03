@@ -3,14 +3,14 @@ import pycamdetector as pcam
 
 cap = cv2.VideoCapture(0)
 FPSReader = pcam.FPS()  # Method to show FPS.
-detector = pcam.HandDetector(detectionCon=0.85, maxHands=1)
+detector = pcam.HandDetector(minDetConf=0.85, maxHands=1)
 
 while True:
     # Get image frame
     success, img = cap.read()
     # Find the hand and its landmarks
     hands, img = detector.findHands(img, flipType=False)  # with draw
-    # hands = detector.findHands(img, draw=False)  # without draw
+    # hands = detector.findHands(img, drawConns=False)  # without draw
 
     if hands:
         # Hand 1
