@@ -190,7 +190,7 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 ```
-### 2. showPercentage:
+### 2. showPerc:
 Its a boolean value which takes the input as **true** or **false**, is used to display the accuracy percentage of the faces detected in a BGR Image or by webcam input.
 By default it is true and displays the accuracy percentage of the faces detected. If you don't want to display percentage, follow the below code:
 ```py
@@ -202,7 +202,7 @@ detector = FaceDetector(minDetConf=0.85)
 while True:
     success, img = cap.read()
     img = cv2.cv2.flip(img, 1)
-    img, bboxs = detector.findFaces(img, showPercentage=False)
+    img, bboxs = detector.findFaces(img, showPerc=False)
     print(bboxs)
     cv2.imshow('Image', img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
