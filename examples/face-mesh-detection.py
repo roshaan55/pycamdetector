@@ -3,7 +3,7 @@ import pycamdetector
 import time
 
 cap = cv2.VideoCapture(0)
-detector = pycamdetector.FaceMeshDetector(maxFaces=1, minDetectionCon=0.7)
+detector = pycamdetector.FaceMeshDetector(maxFaces=1, minDetConf=0.7)
 # cap.set(3, wCam)
 # cap.set(4, hCam)
 pTime = 0
