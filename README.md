@@ -9,6 +9,8 @@ In **pycamdetector 0.6** major bugs and fixes are resolved. The **pycamdetector 
 * Color Module
 * Serial Module
 
+New Module **PlotModule** added in new update which is used to plot live graph.
+
 In **pycamdetector 0.6** some new features are added in Face Detection Module which are: **rectColor**, **rectThick**, **corLen**, **corColor** and **corThick**.
 
 ## Installation:
