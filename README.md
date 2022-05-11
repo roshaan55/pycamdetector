@@ -103,7 +103,7 @@ Its a boolean value which takes the input as **true** or **false**, is used to d
 By default it is true and draws the hand connections.
 If you don't want to draw the hand connectins on hand, you can pass draw as **False**.
 
-**Note**: By default the drawConns takes two parameters: **hands** and **img** with **drawConns=True**. If you pass only **one parameter** with **drawConns=True** it will generate an error.
+**Note**: By default the drawConns takes two parameters: **hands** and **img** with **drawConns=True**. If you pass only **one parameter** with **drawConns=True** it will generate an error. Similarly **drawConns=False** takes only one parameter **hands**, if you pass **hands** with **img** it will also generate an error. You have to follow the sequence as given or mentioned below.
 
 With **drawConns=True**
 ```py
