@@ -3,12 +3,6 @@ Python package to detect face landmarks(468), detect face, pose estimations, obj
 
 The Previous version of pycamdetector **pycamdetector 0.5.4** was a reviesd update of previous version **pycamdetector 0.5** which included some additional new fuctions such as **imagesStack**, **cornerRect**, **putRectText** and all the necessary functions used for Computer Vision using **OpenCV Python**.
 
-In **pycamdetector 0.6** major bugs and fixes are resolved. The **pycamdetector 0.6** includes some additional modules which are listed below:
-
-* Classification Module
-* Color Module
-* Serial Module
-
 New Module **PlotModule** added in new update which is used to plot live graph.
 
 In **pycamdetector 0.6** some new features are added in Face Detection Module which are: **rectColor**, **rectThick**, **corLen**, **corColor** and **corThick**.
